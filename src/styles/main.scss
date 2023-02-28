@@ -1,0 +1,387 @@
+
+body {
+  margin: 0;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  padding: 8px;
+  background-color: #bf1722;
+  color: white;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Header Styling */
+header {
+  margin: auto 5%;
+  text-align: right;
+}
+
+header .nav-grid {
+  padding: 10px;
+}
+
+header nav li {
+  display: inline-block;
+  padding: 10px 5px;
+}
+
+header nav li a {
+  color: #000;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 15px;
+}
+
+header nav li a:hover {
+  color: #515151;
+}
+
+.nav-grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 70px;
+}
+
+.nav-grid img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+#drawer, #hamburger {
+  display: none;
+}
+
+@media screen and (max-width: 426px) {
+  header {
+    position: fixed;
+    width: -webkit-fill-available;
+    height: 100px;
+    background: #f8f8f8;
+    margin: 0;
+    padding: 0 20px;
+    z-index: 99998;
+  }
+
+  #drawer, #hamburger {
+    display: block;
+  }
+
+  #hamburger {
+    color: #000;
+    border: none;
+    background: none;
+    position: relative;
+    text-decoration: none;
+    font-size: 30px;
+    top: 10px;
+    display: inline-block;
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  #hamburger:visited {
+    color: #000;
+  }
+
+  #drawer-desktop {
+    display: none;
+  }
+
+  #drawer.open {
+    transform: translate(-50px,0);
+  }
+
+  #drawer {
+    text-align: left;
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    transform: translate(-300px, 0);
+    transition: transform 0.3s ease-in-out;
+    background-color: #000;
+    z-index: 99999;
+  }
+
+  #drawer li {
+    display: block;
+    text-align: right;
+    padding: 7px 20px;
+  }
+
+  #drawer li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 13px 0;
+  }
+
+  #drawer li:first-child a {
+      color: #fff;
+      text-decoration: none;
+      display: inline-block;
+  }
+
+  #drawer img {
+    width: 100px;
+    display: inline;
+  }
+
+  .skip-link {
+    position: absolute;
+    top: -40px;
+    left: auto;
+    right: 0;
+    z-index: 99999;
+  }
+
+  .skip-link:focus {
+    top: 0;
+  }
+}
+
+/* Main Content Styling */
+.hero-banner {
+  background: #fff url("../public/images/heros/hero-image_1.jpg") no-repeat 0 0;
+  background-size: cover;
+}
+
+.hero-banner {
+  min-height: 400px;
+}
+
+.hero-inner-wrapper {
+  margin: 0;
+  position: relative;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  text-align: left;
+  transform: translate(10%, 110%);
+  display: inline-block;
+}
+
+.hero-inner-wrapper h2 {
+  margin-bottom: 0;
+}
+
+main h1 {
+  margin: 0;
+}
+
+@media screen and (max-width: 426px) {
+  main {
+    padding-top: 100px;
+  }
+}
+
+.restaurant-menu-list {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  grid-template-rows: auto auto;
+  justify-content: center;
+  margin: 20px 0;
+  column-gap: 20px;
+  row-gap: 20px;
+}
+
+.restaurant-menu-item {
+  border-radius: 15px;
+}
+
+.restaurant-menu-item .menu-list-top {
+  position: relative;
+  min-height: 295px;
+  max-height: 295px;
+  overflow: hidden;
+}
+
+.restaurant-menu-item .menu-list-top img {
+  width: 100%;
+  min-height: 295px;
+  max-height: 295px;
+}
+
+#detail-content .restaurant-menu-item .menu-list-top img {
+  width: 100%;
+  height: auto;
+  max-height: initial;
+}
+
+#detail-content .restaurant-menu-item .menu-list-top {
+  height: auto;
+}
+
+
+.restaurant-menu-item .menu-list-top .menu-place {
+  position: absolute;
+  font-weight: 600;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 7px;
+}
+
+.restaurant-menu-item .menu-list-bottom > div {
+  margin: 8px 0;
+}
+
+.restaurant-menu-item .menu-rate .fa {
+  color: orange;
+}
+
+.restaurant-menu-item .menu-name {
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.menu-cta a {
+  display: block;
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+  background-color: #8d0000;
+}
+
+@media screen and (max-width: 426px) {
+
+  header .nav-grid {
+    padding: 15px 10px 15px 0px;
+  }
+
+  .restaurant-menu-list {
+    grid-template-columns: 100%;
+    row-gap: 30px;
+  }
+
+  .restaurant-menu-item {
+    border-radius: 0;
+    border-bottom: 1px solid gray;
+    padding-bottom: 10px;
+  }
+
+  .menu-list-bottom {
+    padding: 0 12px;
+  }
+
+  .hero-inner-wrapper {
+    position: absolute;
+    transform: none;
+    top: 30%;
+    left: 0;
+  }
+
+  .restaurant-menu-item .menu-image img {
+    min-height: auto;
+    max-height: auto;
+  }
+}
+
+/* Single Post Styling */
+#detail-content {
+  padding: 30px;
+}
+
+.detail-subtitle {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+#food-list, #drink-list {
+  margin-bottom: 20px;
+}
+
+.content-heading {
+  text-align: center;
+  margin: 30px;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: 45% 45%;
+  column-gap: 20px;
+  padding: 15px 0;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
+@media screen and (max-width: 426px) {
+  .detail-grid {
+    display: block;
+  }
+
+  .detail-grid img {
+    margin-bottom: 15px;
+  }
+}
+
+.testimonial-naming {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #a1a1a1;
+  border-radius: 12px;
+}
+
+.testimonial-name {
+  font-weight: 600;
+  display: inline;
+}
+
+.testimonial-date {
+  display: inline;
+  font-size: 11px;
+  color: #a1a1a1;
+}
+
+.testimonial-review {
+  margin-top: 10px;
+}
+
+/*
+  Like
+*/
+.like {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #db0000;
+  
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  border-radius: 50%;
+  border: 0;
+  
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Footer Styling */
+footer {
+  text-align: center;
+  color: #fff;
+  background-color: #000;
+  padding: 15px 0;
+}
+
