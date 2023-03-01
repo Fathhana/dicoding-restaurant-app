@@ -16,8 +16,7 @@ const FavoritePage = {
     const restaurants = await FavoriteRestaurantIdb.getAllRestaurants();
     const restaurantsContainer = document.querySelector('#restaurants-from-api');
 
-    console.log(restaurants)
-    if(restaurants.length > 0) {
+    if (restaurants.length > 0) {
       restaurants.forEach((data) => {
         restaurantsContainer.innerHTML += `
           <div class="restaurant-menu-item">
@@ -42,8 +41,8 @@ const FavoritePage = {
           </div>
           `;
       });
-    } else { 
-      restaurantsContainer.innerHTML += `You currently have no favorite restaurant`
+    } else {
+      restaurantsContainer.innerHTML += 'You currently have no favorite restaurant';
     }
   },
 };

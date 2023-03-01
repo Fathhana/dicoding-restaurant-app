@@ -16,7 +16,8 @@
     },
     "rules": {
       "linebreak-style": 0,
-      "no-underscore-dangle":  "off"
+      "no-underscore-dangle":  "off",
+      "no-extra-semi": 0
     },
     "plugins": ["jasmine", "codeceptjs"]
 }
