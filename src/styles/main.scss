@@ -158,7 +158,17 @@ nav ul li {
 
 /* Main Content Styling */
 .hero-banner {
-  background: #fff url("../public/images/heros/hero-image_1.jpg") no-repeat 0 0;
+  background: #fff url("../public/images/heros/hero-image_1-mobile.jpg") no-repeat 0 0;
+  background-image: 
+    -webkit-image-set(
+      url("../public/images/heros/hero-image_1-mobile.jpg") 1x,
+      url("../public/images/heros/hero-image_1.jpg") 2x,
+    );
+  background-image: 
+    image-set(
+      url("../public/images/heros/hero-image_1-mobile.jpg") 1x,
+      url("../public/images/heros/hero-image_1.jpg") 2x,
+    );
   background-size: cover;
 }
 
